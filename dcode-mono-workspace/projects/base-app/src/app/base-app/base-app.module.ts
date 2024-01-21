@@ -12,13 +12,12 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    BrowserModule,
+    // BrowserModule,
     RouterModule.forChild([
       {
         path: '',
         component: BaseAppComponent,
-        pathMatch: 'full'
-      }
+      },
     ])
   ]
 })

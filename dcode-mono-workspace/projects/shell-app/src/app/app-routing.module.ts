@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './pages/base-layout/components/not-found/not-found.component';
 import { BaseLayoutComponent } from './pages/base-layout/base-layout.component';
 import { loadRemoteModule } from '@angular-architects/module-federation';
@@ -51,7 +51,9 @@ const routes: Routes = [
     HeaderComponent,
     NotFoundComponent
   ],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    // preloadingStrategy: PreloadAllModules
+  }),],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -1,0 +1,4 @@
+Angular upgrade to v15 - Routing issue from the sub application
+https://stackoverflow.com/questions/77054773/angular-upgrade-to-v15-routing-issue-from-the-sub-application
+
+solution: you must remove Brower Module from app.module.ts and child module.ts
