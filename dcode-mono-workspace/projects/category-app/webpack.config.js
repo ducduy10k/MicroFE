@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "shellApp",
+    uniqueName: "categoryApp",
     publicPath: "auto",
     scriptType: "text/javascript"
   },
@@ -29,13 +29,12 @@ module.exports = {
     new ModuleFederationPlugin({
 
         // For remotes (please adjust)
-        name: "shellApp",
-        // For hosts (please adjust)
-        remotes: {
-            "baseApp": "baseApp@http://localhost:4300/remoteEntry.js",
-            "categoryApp": "categoryApp@http://localhost:4301/remoteEntry.js",
-        },
-
+        name: "categoryApp",
+        filename: "remoteEntry.js",
+        exposes: {
+            './CategoryModule':  './projects/category-app/src/app/category/category.module.ts',
+        },        
+        
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

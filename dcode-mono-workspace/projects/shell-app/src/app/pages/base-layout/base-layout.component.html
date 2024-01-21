@@ -1,10 +1,17 @@
 <app-header></app-header>
 <button
-  [routerLink]="'/base-app/1234'"
+  [routerLink]="'/base-app'"
   [routerLinkActive]="'selected'"
   [routerLinkActiveOptions]="{ exact: true }"
 >
   go to base app
+</button>
+<button
+  [routerLink]="'/category-app'"
+  [routerLinkActive]="'selected'"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  go to category app
 </button>
 <button
   [routerLink]="'/'"

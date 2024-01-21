@@ -23,6 +23,18 @@ const routes: Routes = [
             .catch((err) => console.log(err));
         },
       },
+      {
+        path: 'category',
+        loadChildren: () => {
+          return loadRemoteModule({
+            remoteName: 'categoryApp',
+            remoteEntry: 'http://localhost:4301/remoteEntry.js',
+            exposedModule: './CategoryModule',
+          })
+            .then((m) => m.CategoryModule)
+            .catch((err) => console.log(err));
+        },
+      },
     ],
   },
 

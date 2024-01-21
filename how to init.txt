@@ -4,6 +4,8 @@ ng new dcode-mono-workspace --createApplication="false"
 cd dcode-mono-workspace
 ng g application shell-app --routing --style=scss
 ng g application base-app --routing --style=scss
+ng g application category-app --routing --style=scss
 npm i webpack webpack-cli --save-dev
 ng add @angular-architects/module-federation --project shell-app --port 4200
 ng add @angular-architects/module-federation --project base-app --port 4300
+ng add @angular-architects/module-federation --project category-app --port 4301
