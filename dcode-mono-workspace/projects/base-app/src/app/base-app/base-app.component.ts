@@ -10,5 +10,8 @@ export class BaseAppComponent {
 
   constructor(private router:Router, private route: ActivatedRoute) { }
 
-  
+  backHome() {
+    this.router.navigate(['/home']);
+  }
+    
 }

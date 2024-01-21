@@ -16,7 +16,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       {
         path: '',
-        component: BaseAppComponent
+        component: BaseAppComponent,
+        pathMatch: 'full'
       }
     ])
   ]

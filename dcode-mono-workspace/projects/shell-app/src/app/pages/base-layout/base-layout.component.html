@@ -1,5 +1,17 @@
 <app-header></app-header>
-<button [routerLink]="'base-app'">go to base app</button>
-<button [routerLink]="''">go home</button>
+<button
+  [routerLink]="'/base-app/1234'"
+  [routerLinkActive]="'selected'"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  go to base app
+</button>
+<button
+  [routerLink]="'/'"
+  [routerLinkActive]="'selected'"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  go home
+</button>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
